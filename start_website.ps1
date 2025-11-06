@@ -1,5 +1,6 @@
-# PowerShell script to start the physiotherapy website
-Write-Host "Starting PhysioWell Website..." -ForegroundColor Green
+# PowerShell script to start the physiotherapy website (Development Mode)
+Write-Host "Starting PhysioWell Website (Development)..." -ForegroundColor Green
+Write-Host "Using app_simple.py for local development" -ForegroundColor Cyan
 Write-Host ""
 
 # Navigate to project directory

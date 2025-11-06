@@ -1,5 +1,6 @@
 @echo off
-echo Starting PhysioWell Website...
+echo Starting PhysioWell Website (Development Mode)...
+echo Using app_simple.py for local development
 echo.
 
 REM Navigate to project directory

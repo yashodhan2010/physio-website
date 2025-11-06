@@ -1,0 +1,28 @@
+# AWS App Runner Service Configuration
+# Use this with AWS CLI: aws apprunner create-service --cli-input-yaml file://apprunner-service.yaml
+
+ServiceName: physio-website
+SourceConfiguration:
+  ImageRepository:
+    ImageIdentifier: YOUR_ECR_URI_HERE  # Replace with your actual ECR URI
+    ImageConfiguration:
+      Port: "5000"
+      RuntimeEnvironmentVariables:
+        FLASK_ENV: "production"
+        # Add your environment variables here after deployment:
+        # MAIL_USERNAME: "your.email@gmail.com"
+        # MAIL_PASSWORD: "your-app-password"
+        # SECRET_KEY: "your-secret-key"
+        # GOOGLE_ADS_CONVERSION_ID: "AW-123456789"
+    ImageRepositoryType: ECR
+    AutoDeploymentsEnabled: true
+InstanceConfiguration:
+  Cpu: "0.25 vCPU"  # Can upgrade to "0.5 vCPU" for better performance
+  Memory: "0.5 GB"   # Can upgrade to "1 GB" for better performance
+HealthCheckConfiguration:
+  Protocol: HTTP
+  Path: "/"
+  IntervalSeconds: 20
+  TimeoutSeconds: 10
+  HealthyThresholdCount: 1
+  UnhealthyThresholdCount: 5

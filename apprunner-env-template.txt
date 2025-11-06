@@ -1,0 +1,26 @@
+# Environment Variables for AWS App Runner
+# Copy these to your App Runner service configuration
+
+# Required for basic functionality
+FLASK_ENV=production
+SECRET_KEY=generate-a-strong-random-secret-key-here
+
+# Required for contact forms (Gmail SMTP)
+MAIL_USERNAME=your.email@gmail.com
+MAIL_PASSWORD=your-16-character-gmail-app-password
+
+# Optional for Google Ads tracking
+GOOGLE_ADS_CONVERSION_ID=AW-123456789
+GA_TRACKING_ID=G-ABCDEFGHIJ
+
+# Optional labels for conversion tracking
+CONTACT_CONVERSION_LABEL=contact_form_submit
+APPOINTMENT_CONVERSION_LABEL=appointment_booking
+
+# How to set these in App Runner:
+# 1. Go to AWS App Runner Console
+# 2. Select your service
+# 3. Configuration tab
+# 4. Edit configuration
+# 5. Add environment variables
+# 6. Deploy changes
