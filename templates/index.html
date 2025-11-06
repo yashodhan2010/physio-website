@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Professional Physiotherapy Services{% endblock %}
+
+{% block meta_description %}Expert physiotherapy services for pain relief, injury recovery, and wellness. Book your appointment today and start your journey to better health.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Expert Physiotherapy Care for Your Recovery</h1>
+                <p class="lead mb-4">Get back to your best life with professional physiotherapy services. Our expert care helps you recover from injuries, manage pain, and improve your overall wellness.</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('book_appointment') }}" class="btn btn-light btn-lg me-3 mb-2" onclick="gtag_report_conversion()">
+                        <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                    </a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg mb-2">
+                        <i class="fas fa-info-circle me-2"></i>Our Services
+                    </a>
+                </div>
+                <div class="hero-features mt-4">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <i class="fas fa-user-md fa-2x mb-2"></i>
+                            <p class="small">Expert Therapists</p>
+                        </div>
+                        <div class="col-4">
+                            <i class="fas fa-clock fa-2x mb-2"></i>
+                            <p class="small">Flexible Hours</p>
+                        </div>
+                        <div class="col-4">
+                            <i class="fas fa-award fa-2x mb-2"></i>
+                            <p class="small">Proven Results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image">
+                    <!-- Placeholder for hero image -->
+                    <div class="bg-white bg-opacity-10 rounded-3 p-5">
+                        <i class="fas fa-heartbeat display-1 text-white mb-3"></i>
+                        <h3>Your Health is Our Priority</h3>
+                        <p>Professional physiotherapy services tailored to your needs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Contact Banner -->
+<section class="bg-light py-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="d-flex flex-wrap align-items-center">
+                    <div class="me-4 mb-2">
+                        <i class="fas fa-phone text-primary me-2"></i>
+                        <strong>Call Now: (555) 123-4567</strong>
+                    </div>
+                    <div class="me-4 mb-2">
+                        <i class="fas fa-envelope text-primary me-2"></i>
+                        <strong>info@physiowell.com</strong>
+                    </div>
+                    <div class="mb-2">
+                        <i class="fas fa-clock text-primary me-2"></i>
+                        <strong>Mon-Fri: 8AM-7PM</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">
+                    <i class="fas fa-comments me-2"></i>Get Free Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark">Our Services</h2>
+            <p class="lead text-muted">Comprehensive physiotherapy solutions for all your needs</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 text-center p-4 border rounded-3 shadow-sm">
+                    <div class="service-icon mb-3">
+                        <i class="fas fa-running fa-3x text-primary"></i>
+                    </div>
+                    <h4>Sports Injury Recovery</h4>
+                    <p class="text-muted">Specialized treatment for sports-related injuries to get you back in the game faster.</p>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 text-center p-4 border rounded-3 shadow-sm">
+                    <div class="service-icon mb-3">
+                        <i class="fas fa-bone fa-3x text-primary"></i>
+                    </div>
+                    <h4>Pain Management</h4>
+                    <p class="text-muted">Effective pain relief strategies and treatments for chronic and acute conditions.</p>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 text-center p-4 border rounded-3 shadow-sm">
+                    <div class="service-icon mb-3">
+                        <i class="fas fa-wheelchair fa-3x text-primary"></i>
+                    </div>
+                    <h4>Rehabilitation</h4>
+                    <p class="text-muted">Comprehensive rehabilitation programs to restore function and mobility.</p>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4">Why Choose Our Physiotherapy Services?</h2>
+                <div class="feature-list">
+                    <div class="feature-item d-flex mb-3">
+                        <div class="feature-icon me-3">
+                            <i class="fas fa-check-circle fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5>Licensed & Experienced</h5>
+                            <p class="text-muted">Our therapists are fully licensed with years of experience in treating various conditions.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item d-flex mb-3">
+                        <div class="feature-icon me-3">
+                            <i class="fas fa-check-circle fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5>Personalized Treatment</h5>
+                            <p class="text-muted">Every treatment plan is customized to your specific needs and goals.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item d-flex mb-3">
+                        <div class="feature-icon me-3">
+                            <i class="fas fa-check-circle fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5>Modern Equipment</h5>
+                            <p class="text-muted">State-of-the-art equipment and latest treatment techniques for optimal results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="stats-grid text-center">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="stat-item bg-white p-4 rounded-3 shadow-sm">
+                                <h3 class="text-primary fw-bold">500+</h3>
+                                <p class="text-muted mb-0">Patients Treated</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item bg-white p-4 rounded-3 shadow-sm">
+                                <h3 class="text-primary fw-bold">95%</h3>
+                                <p class="text-muted mb-0">Success Rate</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item bg-white p-4 rounded-3 shadow-sm">
+                                <h3 class="text-primary fw-bold">10+</h3>
+                                <p class="text-muted mb-0">Years Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item bg-white p-4 rounded-3 shadow-sm">
+                                <h3 class="text-primary fw-bold">24/7</h3>
+                                <p class="text-muted mb-0">Support Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Ready to Start Your Recovery Journey?</h2>
+        <p class="lead mb-4">Don't let pain hold you back. Book your appointment today and take the first step towards better health.</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('book_appointment') }}" class="btn btn-light btn-lg me-3 mb-2" onclick="gtag_report_conversion()">
+                <i class="fas fa-calendar-check me-2"></i>Book Appointment Now
+            </a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg mb-2">
+                <i class="fas fa-phone me-2"></i>Call for Free Consultation
+            </a>
+        </div>
+        <p class="mt-3 mb-0">
+            <small><i class="fas fa-shield-alt me-2"></i>100% Safe & Confidential</small>
+        </p>
+    </div>
+</section>
+{% endblock %}
+
+{% block additional_scripts %}
+<script>
+// Google Ads conversion tracking for page views
+gtag('event', 'page_view', {
+    page_title: 'Home',
+    page_location: window.location.href
+});
+</script>
+{% endblock %}

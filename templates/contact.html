@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Professional Physiotherapy Services{% endblock %}
+
+{% block meta_description %}Contact our physiotherapy clinic for appointments, consultations, and questions. Call (555) 123-4567 or fill out our online form.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead">Get in touch to schedule your appointment or ask any questions</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form bg-light p-5 rounded-3">
+                    <h2 class="mb-4">Send us a Message</h2>
+                    <form action="{{ url_for('submit_contact') }}" method="POST" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="service" class="form-label">Service of Interest</label>
+                                <select class="form-select" id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="sports-injury">Sports Injury Recovery</option>
+                                    <option value="pain-management">Pain Management</option>
+                                    <option value="rehabilitation">Rehabilitation</option>
+                                    <option value="post-surgical">Post-Surgical Recovery</option>
+                                    <option value="wellness">General Wellness</option>
+                                    <option value="consultation">Free Consultation</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Tell us about your condition, symptoms, or any questions you have..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="consent" required>
+                                    <label class="form-check-label" for="consent">
+                                        I consent to being contacted by PhysioWell regarding my inquiry. *
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg" onclick="gtag_report_conversion()">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h3 class="mb-4">Get in Touch</h3>
+                    
+                    <!-- Quick Contact -->
+                    <div class="contact-item mb-4 p-3 bg-light rounded-3">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-phone me-2"></i>Call Us Now
+                        </h5>
+                        <p class="mb-2"><strong>(555) 123-4567</strong></p>
+                        <p class="text-muted small mb-0">Available Mon-Fri: 8AM-7PM, Sat: 9AM-5PM</p>
+                        <a href="tel:+15551234567" class="btn btn-primary btn-sm mt-2">
+                            <i class="fas fa-phone me-1"></i>Call Now
+                        </a>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-item mb-4 p-3 bg-light rounded-3">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>Visit Our Clinic
+                        </h5>
+                        <p class="mb-2">123 Main Street<br>City, State 12345</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-directions me-1"></i>Get Directions
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-item mb-4 p-3 bg-light rounded-3">
+                        <h5 class="text-primary mb-3">
+                            <i class="fas fa-envelope me-2"></i>Email Us
+                        </h5>
+                        <p class="mb-2">info@physiowell.com</p>
+                        <p class="text-muted small mb-0">We respond within 24 hours</p>
+                    </div>
+
+                    <!-- Emergency -->
+                    <div class="contact-item mb-4 p-3 bg-danger text-white rounded-3">
+                        <h5 class="mb-3">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Emergency?
+                        </h5>
+                        <p class="mb-2">For medical emergencies, please call 911 or visit your nearest emergency room.</p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-contact text-center">
+                        <h5 class="mb-3">Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm mb-2">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section (Optional) -->
+<section class="map-section bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h3>Find Our Clinic</h3>
+            <p class="text-muted">Conveniently located in the heart of the city</p>
+        </div>
+        <!-- Placeholder for Google Maps embed -->
+        <div class="map-container bg-white p-4 rounded-3 text-center" style="height: 300px;">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div>
+                    <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+                    <h5>Interactive Map</h5>
+                    <p class="text-muted">Embed your Google Maps location here</p>
+                    <small class="text-muted">Replace this section with an actual Google Maps embed</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
+            <p class="lead text-muted">Quick answers to common questions</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Do I need a referral to see a physiotherapist?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                In most cases, you don't need a referral to see a physiotherapist. However, some insurance plans may require one. We recommend checking with your insurance provider or calling us to verify.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                What should I bring to my first appointment?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Please bring your insurance card, a valid ID, any relevant medical records or imaging results, and a list of current medications. Wear comfortable clothing that allows easy access to the area being treated.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                How long is each treatment session?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Treatment sessions typically last 45-60 minutes, depending on your specific needs and treatment plan. Your first visit may take longer as we conduct a comprehensive evaluation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block additional_scripts %}
+<script>
+// Form validation and Google Ads tracking
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Track form submission
+    gtag('event', 'contact_form_submit', {
+        event_category: 'engagement',
+        event_label: 'contact_form'
+    });
+});
+
+// Track phone clicks
+document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
+    element.addEventListener('click', function() {
+        gtag('event', 'phone_call', {
+            event_category: 'engagement',
+            event_label: 'phone_click'
+        });
+    });
+});
+</script>
+{% endblock %}
