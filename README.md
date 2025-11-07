@@ -68,5 +68,8 @@ physio-website/
 - **[Environment Template](apprunner-env-template.txt)**: Required environment variables
 
 ---
-
+## Docker File update for deployment on AWS
+docker build -t physiowell-website .
+docker tag physiowell-website:latest 193452400523.dkr.ecr.ap-south-1.amazonaws.com/physiowell-website:latest
+docker push 193452400523.dkr.ecr.ap-south-1.amazonaws.com/physiowell-website:latest
 **Built for healthcare professionals** • **Mobile-optimized** • **Easy to deploy**
