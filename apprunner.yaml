@@ -1,5 +1,4 @@
 version: 1.0
-# Must include runtime: 'container' but no unsupported fields
 runtime: container
 
 build:
