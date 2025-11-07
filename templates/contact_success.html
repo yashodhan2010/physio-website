@@ -12,16 +12,31 @@
                         <i class="fas fa-check-circle fa-5x text-success"></i>
                     </div>
                     <h1 class="display-4 fw-bold text-success mb-4">Thank You{% if name %}, {{ name }}{% endif %}!</h1>
-                    <p class="lead mb-4">Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                    
+                    {% if is_appointment %}
+                    <p class="lead mb-4">Your appointment request has been submitted successfully. I'll contact you within 24 hours to confirm your appointment.</p>
                     
                     <div class="next-steps mb-4">
                         <h5>What happens next?</h5>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-phone text-primary me-2"></i>We'll call you to discuss your needs</li>
-                            <li><i class="fas fa-calendar text-primary me-2"></i>Schedule your appointment</li>
-                            <li><i class="fas fa-clipboard-list text-primary me-2"></i>Send you preparation information</li>
+                            <li><i class="fas fa-phone text-primary me-2"></i>I'll call you within 24 hours to confirm</li>
+                            <li><i class="fas fa-calendar-check text-primary me-2"></i>We'll finalize your appointment time</li>
+                            <li><i class="fas fa-clipboard-list text-primary me-2"></i>I'll send preparation instructions</li>
+                            <li><i class="fas fa-video text-primary me-2"></i>Video link will be provided (if applicable)</li>
                         </ul>
                     </div>
+                    {% else %}
+                    <p class="lead mb-4">Your message has been sent successfully. I'll get back to you within 24 hours.</p>
+                    
+                    <div class="next-steps mb-4">
+                        <h5>What happens next?</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-phone text-primary me-2"></i>I'll call you to discuss your needs</li>
+                            <li><i class="fas fa-calendar text-primary me-2"></i>Help you schedule an appointment</li>
+                            <li><i class="fas fa-info-circle text-primary me-2"></i>Provide additional information</li>
+                        </ul>
+                    </div>
+                    {% endif %}
                     
                     <div class="action-buttons">
                         <a href="{{ url_for('home') }}" class="btn btn-primary me-3">

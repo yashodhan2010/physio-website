@@ -91,11 +91,12 @@
                                     <select class="form-select" id="service-type" name="service-type" required>
                                         <option value="">Select a service</option>
                                         <option value="initial-consultation">Initial Consultation</option>
+                                        <option value="follow-up">Follow-up Consultation</option>
                                         <option value="sports-injury">Sports Injury Treatment</option>
-                                        <option value="pain-management">Pain Management</option>
-                                        <option value="rehabilitation">Rehabilitation</option>
+                                        <option value="back-neck-pain">Back & Neck Pain</option>
+                                        <option value="joint-pain">Joint Pain Treatment</option>
                                         <option value="post-surgical">Post-Surgical Recovery</option>
-                                        <option value="wellness">General Wellness</option>
+                                        <option value="general-wellness">General Wellness & Fitness</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
@@ -164,33 +165,42 @@
                             </div>
                         </div>
 
-                        <!-- Insurance Information -->
+                        <!-- Consultation Type -->
                         <div class="form-section mb-4">
                             <h4 class="section-title mb-3">
-                                <i class="fas fa-file-medical me-2 text-primary"></i>Insurance & Payment
+                                <i class="fas fa-video me-2 text-primary"></i>Consultation Type & Payment
                             </h4>
                             <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="insurance" class="form-label">Insurance Provider</label>
-                                    <select class="form-select" id="insurance" name="insurance">
-                                        <option value="">Select insurance</option>
-                                        <option value="aetna">Aetna</option>
-                                        <option value="blue-cross">Blue Cross Blue Shield</option>
-                                        <option value="cigna">Cigna</option>
-                                        <option value="humana">Humana</option>
-                                        <option value="medicare">Medicare</option>
-                                        <option value="self-pay">Self Pay</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="referral" class="form-label">Do you have a doctor's referral?</label>
-                                    <select class="form-select" id="referral" name="referral">
-                                        <option value="">Select option</option>
-                                        <option value="yes">Yes, I have a referral</option>
-                                        <option value="no">No referral</option>
-                                        <option value="unsure">I'm not sure</option>
-                                    </select>
+                                <div class="col-12">
+                                    <label for="consultation-type" class="form-label">Preferred Consultation Type *</label>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="card h-100">
+                                                <div class="card-body text-center">
+                                                    <input type="radio" class="form-check-input" id="in-person" name="consultation-type" value="in-person" required>
+                                                    <label class="form-check-label w-100 mt-2" for="in-person">
+                                                        <i class="fas fa-user-md fa-2x text-primary mb-2 d-block"></i>
+                                                        <strong>In-Person Consultation</strong><br>
+                                                        <span class="text-success fw-bold">₹1,500</span><br>
+                                                        <small class="text-muted">60-minute comprehensive evaluation</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card h-100">
+                                                <div class="card-body text-center">
+                                                    <input type="radio" class="form-check-input" id="video-call" name="consultation-type" value="video-call" required>
+                                                    <label class="form-check-label w-100 mt-2" for="video-call">
+                                                        <i class="fas fa-video fa-2x text-primary mb-2 d-block"></i>
+                                                        <strong>Video Consultation</strong><br>
+                                                        <span class="text-success fw-bold">₹500</span><br>
+                                                        <small class="text-muted">45-minute online assessment</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -280,8 +290,8 @@
 <section class="py-4 bg-danger text-white">
     <div class="container text-center">
         <h5><i class="fas fa-exclamation-triangle me-2"></i>Need Immediate Help?</h5>
-        <p class="mb-3">If you're experiencing a medical emergency, please call 911 or visit your nearest emergency room.</p>
-        <p class="mb-0">For urgent appointments, call us directly at <strong>(555) 123-4567</strong></p>
+        <p class="mb-3">If you're experiencing a medical emergency, please call 102 (ambulance) or visit your nearest emergency room.</p>
+        <p class="mb-0">For urgent appointments, call us directly at <strong>+91-XXXX-XXXX-XX</strong></p>
     </div>
 </section>
 {% endblock %}
