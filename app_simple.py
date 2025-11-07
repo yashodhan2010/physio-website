@@ -68,12 +68,42 @@ def contact():
 @app.route('/book-appointment')
 def book_appointment():
     """Booking page optimized for Google Ads conversions"""
-    return render_template('book_appointment.html')
+    from datetime import datetime
+    today_date = datetime.now().strftime('%Y-%m-%d')
+    return render_template('book_appointment.html', today_date=today_date)
+
+@app.route('/test-appointment', methods=['GET', 'POST'])
+def test_appointment():
+    """Test route for debugging appointment booking"""
+    if request.method == 'POST':
+        logger.info("TEST: Appointment form submitted")
+        logger.info(f"TEST: Form data: {dict(request.form)}")
+        return f"<h2>Form Data Received:</h2><pre>{dict(request.form)}</pre>"
+    
+    return '''
+    <form method="POST">
+        <input name="name" placeholder="Name" required><br><br>
+        <input name="email" type="email" placeholder="Email" required><br><br>
+        <input name="phone" placeholder="Phone"><br><br>
+        <input type="hidden" name="service" value="appointment-booking">
+        <select name="service-type" required>
+            <option value="">Select Service</option>
+            <option value="initial-consultation">Initial Consultation</option>
+        </select><br><br>
+        <input type="radio" name="consultation-type" value="video-call" required> Video Call<br>
+        <input type="radio" name="consultation-type" value="in-person" required> In Person<br><br>
+        <textarea name="message" placeholder="Describe condition" required></textarea><br><br>
+        <button type="submit">Test Submit</button>
+    </form>
+    '''
 
 @app.route('/submit-contact', methods=['POST'])
 def submit_contact():
     """Handle contact form and appointment booking submission"""
     try:
+        # Debug: Log all form data
+        logger.info(f"Form data received: {dict(request.form)}")
+        
         name = request.form.get('name')
         email = request.form.get('email')
         phone = request.form.get('phone')
@@ -91,9 +121,23 @@ def submit_contact():
             return redirect(url_for('contact'))
         
         if is_appointment:
+            # Validate appointment-specific required fields
+            if not message:
+                flash('Please describe your condition or symptoms.', 'error')
+                return redirect(url_for('book_appointment'))
+            
             # Handle appointment booking
             service_type = request.form.get('service-type')
             consultation_type = request.form.get('consultation-type')
+            
+            # Validate required appointment fields
+            if not service_type:
+                flash('Please select a service type.', 'error')
+                return redirect(url_for('book_appointment'))
+            
+            if not consultation_type:
+                flash('Please select a consultation type (In-Person or Video).', 'error')
+                return redirect(url_for('book_appointment'))
             preferred_date = request.form.get('preferred-date')
             preferred_time = request.form.get('preferred-time')
             urgency = request.form.get('urgency')

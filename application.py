@@ -76,12 +76,17 @@ def contact():
 @app.route('/book-appointment')
 def book_appointment():
     """Booking page optimized for Google Ads conversions"""
-    return render_template('book_appointment.html')
+    from datetime import datetime
+    today_date = datetime.now().strftime('%Y-%m-%d')
+    return render_template('book_appointment.html', today_date=today_date)
 
 @app.route('/submit-contact', methods=['POST'])
 def submit_contact():
     """Handle contact form and appointment booking submission"""
     try:
+        # Debug: Log all form data
+        logger.info(f"Form data received: {dict(request.form)}")
+        
         name = request.form.get('name')
         email = request.form.get('email')
         phone = request.form.get('phone')
@@ -99,9 +104,24 @@ def submit_contact():
             return redirect(url_for('contact'))
         
         if is_appointment:
+            # Validate appointment-specific required fields
+            if not message:
+                flash('Please describe your condition or symptoms.', 'error')
+                return redirect(url_for('book_appointment'))
+            
             # Handle appointment booking
             service_type = request.form.get('service-type')
             consultation_type = request.form.get('consultation-type')
+            
+            # Validate required appointment fields
+            if not service_type:
+                flash('Please select a service type.', 'error')
+                return redirect(url_for('book_appointment'))
+            
+            if not consultation_type:
+                flash('Please select a consultation type (In-Person or Video).', 'error')
+                return redirect(url_for('book_appointment'))
+            
             preferred_date = request.form.get('preferred-date')
             preferred_time = request.form.get('preferred-time')
             urgency = request.form.get('urgency')
