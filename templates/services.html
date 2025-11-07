@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}Our Services - Professional Physiotherapy Treatments{% endblock %}
+{% block title %}My Services - Professional Physiotherapy Treatments in India{% endblock %}
 
-{% block meta_description %}Comprehensive physiotherapy services including sports injury recovery, pain management, rehabilitation, and wellness programs. Expert care tailored to your needs.{% endblock %}
+{% block meta_description %}Professional physiotherapy services in India including sports injury recovery, pain management, and rehabilitation. Affordable consultations starting from ₹500 video consultation.{% endblock %}
 
 {% block content %}
 <!-- Page Header -->
 <section class="page-header bg-primary text-white py-5">
     <div class="container text-center">
-        <h1 class="display-4 fw-bold">Our Services</h1>
-        <p class="lead">Comprehensive physiotherapy solutions for all your health needs</p>
+        <h1 class="display-4 fw-bold">My Services</h1>
+        <p class="lead">Professional physiotherapy care with affordable consultation options</p>
     </div>
 </section>
 
@@ -17,6 +17,27 @@
 <section class="py-5">
     <div class="container">
         <div class="row g-4">
+            <!-- Orthopedic Rehabilitation -->
+            <div class="col-lg-6">
+                <div class="service-detail bg-light p-5 rounded-3 h-100">
+                    <div class="service-header mb-4">
+                        <i class="fas fa-bone fa-3x text-primary mb-3"></i>
+                        <h3>Orthopedic Rehabilitation</h3>
+                    </div>
+                    <p class="mb-4">Comprehensive rehabilitation for musculoskeletal conditions and post-surgical recovery.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li><i class="fas fa-check text-success me-2"></i>Post-surgical rehabilitation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Joint replacement recovery</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Fracture rehabilitation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Mobility restoration</li>
+                    </ul>
+                    <div class="common-conditions">
+                        <h6 class="text-primary">Common Conditions Treated:</h6>
+                        <p class="small text-muted">Post-surgical recovery, joint replacements, fractures, orthopedic injuries</p>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Sports Injury Recovery -->
             <div class="col-lg-6">
                 <div class="service-detail bg-light p-5 rounded-3 h-100">
@@ -59,44 +80,25 @@
                 </div>
             </div>
 
-            <!-- Orthopedic Rehabilitation -->
-            <div class="col-lg-6">
-                <div class="service-detail bg-light p-5 rounded-3 h-100">
-                    <div class="service-header mb-4">
-                        <i class="fas fa-bone fa-3x text-primary mb-3"></i>
-                        <h3>Orthopedic Rehabilitation</h3>
-                    </div>
-                    <p class="mb-4">Comprehensive rehabilitation for musculoskeletal conditions and post-surgical recovery.</p>
-                    <ul class="list-unstyled mb-4">
-                        <li><i class="fas fa-check text-success me-2"></i>Post-surgical rehabilitation</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Joint replacement recovery</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Fracture rehabilitation</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Mobility restoration</li>
-                    </ul>
-                    <div class="common-conditions">
-                        <h6 class="text-primary">Common Conditions Treated:</h6>
-                        <p class="small text-muted">Post-surgical recovery, joint replacements, fractures, orthopedic injuries</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Neurological Rehabilitation -->
+
+            <!-- Geriatric Rehabilitation -->
             <div class="col-lg-6">
                 <div class="service-detail bg-light p-5 rounded-3 h-100">
                     <div class="service-header mb-4">
-                        <i class="fas fa-brain fa-3x text-primary mb-3"></i>
-                        <h3>Neurological Rehabilitation</h3>
+                        <i class="fas fa-user fa-3x text-primary mb-3"></i>
+                        <h3>Geriatric Rehabilitation</h3>
                     </div>
-                    <p class="mb-4">Specialized care for individuals with neurological conditions affecting movement and function.</p>
+                    <p class="mb-4">Specialized care for individuals with age-related conditions affecting movement and function.</p>
                     <ul class="list-unstyled mb-4">
-                        <li><i class="fas fa-check text-success me-2"></i>Stroke rehabilitation</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Balance and coordination training</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Fall prevention programs</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Strength and balance training</li>
                         <li><i class="fas fa-check text-success me-2"></i>Gait training</li>
                         <li><i class="fas fa-check text-success me-2"></i>Functional movement therapy</li>
                     </ul>
                     <div class="common-conditions">
                         <h6 class="text-primary">Common Conditions Treated:</h6>
-                        <p class="small text-muted">Stroke, Parkinson's disease, multiple sclerosis, balance disorders</p>
+                        <p class="small text-muted">Stroke, Parkinson's disease, Osteoporosis, Arthritis, Balance disorders</p>
                     </div>
                 </div>
             </div>
@@ -136,8 +138,8 @@
             <div class="col-lg-4 col-md-6">
                 <div class="technique-card bg-white p-4 rounded-3 text-center shadow-sm h-100">
                     <i class="fas fa-spa fa-2x text-primary mb-3"></i>
-                    <h5>Dry Needling</h5>
-                    <p class="text-muted">Trigger point therapy to relieve muscle tension and improve mobility.</p>
+                    <h5>Specialized Programs</h5>
+                    <p class="text-muted">Tailored programs for specific populations and conditions.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -158,128 +160,98 @@
     </div>
 </section>
 
-<!-- Specialized Programs -->
-<section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Specialized Programs</h2>
-            <p class="lead text-muted">Tailored programs for specific populations and conditions</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="program-card bg-gradient-to-r from-blue-500 to-blue-600 text-white p-5 rounded-3">
-                    <h4 class="mb-3">
-                        <i class="fas fa-female me-2"></i>Women's Health
-                    </h4>
-                    <p class="mb-4">Specialized care for women's unique health needs including pelvic floor dysfunction, pregnancy-related pain, and postpartum recovery.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check me-2"></i>Pelvic floor therapy</li>
-                        <li><i class="fas fa-check me-2"></i>Prenatal and postnatal care</li>
-                        <li><i class="fas fa-check me-2"></i>Diastasis recti treatment</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="program-card bg-gradient-to-r from-green-500 to-green-600 text-white p-5 rounded-3">
-                    <h4 class="mb-3">
-                        <i class="fas fa-user-elderly me-2"></i>Senior Wellness
-                    </h4>
-                    <p class="mb-4">Comprehensive programs designed to help seniors maintain independence, prevent falls, and stay active.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check me-2"></i>Fall prevention programs</li>
-                        <li><i class="fas fa-check me-2"></i>Arthritis management</li>
-                        <li><i class="fas fa-check me-2"></i>Mobility enhancement</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="program-card bg-gradient-to-r from-purple-500 to-purple-600 text-white p-5 rounded-3">
-                    <h4 class="mb-3">
-                        <i class="fas fa-briefcase me-2"></i>Work Injury Recovery
-                    </h4>
-                    <p class="mb-4">Specialized treatment for workplace injuries with focus on safe return to work and injury prevention.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check me-2"></i>Ergonomic assessments</li>
-                        <li><i class="fas fa-check me-2"></i>Work hardening programs</li>
-                        <li><i class="fas fa-check me-2"></i>Functional capacity evaluations</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="program-card bg-gradient-to-r from-orange-500 to-orange-600 text-white p-5 rounded-3">
-                    <h4 class="mb-3">
-                        <i class="fas fa-child me-2"></i>Pediatric Therapy
-                    </h4>
-                    <p class="mb-4">Gentle, effective treatment for children with developmental delays, injuries, or movement disorders.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check me-2"></i>Developmental assessments</li>
-                        <li><i class="fas fa-check me-2"></i>Motor skill development</li>
-                        <li><i class="fas fa-check me-2"></i>Family education and support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Insurance & Pricing -->
+<!-- Consultation Pricing -->
 <section class="bg-light py-5">
     <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-                <h2 class="display-5 fw-bold mb-4">Insurance & Payment Options</h2>
-                <p class="mb-4">We accept most major insurance plans and offer flexible payment options to make quality care accessible.</p>
-                
-                <div class="insurance-list">
-                    <h5 class="text-primary mb-3">Accepted Insurance Plans:</h5>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Blue Cross Blue Shield</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Aetna</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Cigna</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Humana</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Medicare</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Workers' Compensation</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Auto Insurance</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Most other plans</li>
-                            </ul>
-                        </div>
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Consultation Packages</h2>
+            <p class="lead text-muted">Affordable physiotherapy consultations tailored to your needs</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Initial Consultation -->
+            <div class="col-lg-5 col-md-6">
+                <div class="pricing-card bg-white p-5 rounded-3 shadow h-100 text-center">
+                    <div class="pricing-header mb-4">
+                        <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                        <h4>Initial Consultation</h4>
+                        <p class="text-muted">In-Person Assessment</p>
                     </div>
-                </div>
-                
-                <div class="payment-options mt-4">
-                    <h5 class="text-primary mb-3">Payment Options:</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-credit-card text-primary me-2"></i>Credit and Debit Cards</li>
-                        <li><i class="fas fa-money-check text-primary me-2"></i>HSA/FSA Accounts</li>
-                        <li><i class="fas fa-handshake text-primary me-2"></i>Payment Plans Available</li>
-                        <li><i class="fas fa-dollar-sign text-primary me-2"></i>Self-Pay Options</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="pricing-info bg-white p-5 rounded-3 shadow">
-                    <h4 class="text-center mb-4">Initial Consultation</h4>
-                    <div class="price-display text-center mb-4">
-                        <span class="h1 text-primary fw-bold">$150</span>
+                    <div class="price-display mb-4">
+                        <span class="h1 text-primary fw-bold">₹1,500</span>
                         <p class="text-muted">Comprehensive 60-minute evaluation</p>
                     </div>
-                    <ul class="list-unstyled mb-4">
-                        <li><i class="fas fa-check text-success me-2"></i>Detailed assessment</li>
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li><i class="fas fa-check text-success me-2"></i>Detailed physical assessment</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Medical history review</li>
                         <li><i class="fas fa-check text-success me-2"></i>Personalized treatment plan</li>
                         <li><i class="fas fa-check text-success me-2"></i>Home exercise program</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Progress tracking</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Progress tracking setup</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Follow-up recommendations</li>
                     </ul>
                     <div class="text-center">
-                        <a href="{{ url_for('book_appointment') }}" class="btn btn-primary btn-lg" onclick="gtag_report_conversion()">
-                            <i class="fas fa-calendar-check me-2"></i>Book Consultation
+                        <a href="{{ url_for('book_appointment') }}" class="btn btn-primary btn-lg mb-3" onclick="gtag_report_conversion()">
+                            <i class="fas fa-calendar-check me-2"></i>Book In-Person
                         </a>
-                        <p class="mt-3 small text-muted">Most insurance plans accepted</p>
+                        <p class="small text-muted">Best for initial assessment</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Consultation -->
+            <div class="col-lg-5 col-md-6">
+                <div class="pricing-card bg-white p-5 rounded-3 shadow h-100 text-center position-relative">
+                    <div class="badge bg-success position-absolute top-0 start-50 translate-middle px-3 py-2">
+                        Popular Choice
+                    </div>
+                    <div class="pricing-header mb-4 mt-3">
+                        <i class="fas fa-video fa-3x text-primary mb-3"></i>
+                        <h4>First Video Consultation</h4>
+                        <p class="text-muted">Online Assessment</p>
+                    </div>
+                    <div class="price-display mb-4">
+                        <span class="h1 text-primary fw-bold">₹500</span>
+                        <p class="text-muted">Convenient 45-minute video session</p>
+                    </div>
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li><i class="fas fa-check text-success me-2"></i>Online video consultation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Symptom assessment</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Movement analysis</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Initial exercise guidance</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Treatment recommendations</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Digital exercise sheet</li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="{{ url_for('book_appointment') }}" class="btn btn-success btn-lg mb-3" onclick="gtag_report_conversion()">
+                            <i class="fas fa-video me-2"></i>Book Video Call
+                        </a>
+                        <p class="small text-muted">Perfect for follow-ups</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Payment Options -->
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="payment-info bg-white p-4 rounded-3 shadow-sm">
+                    <h5 class="text-center text-primary mb-3">Payment Options</h5>
+                    <div class="row g-3 text-center">
+                        <div class="col-md-3">
+                            <i class="fas fa-mobile-alt fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0">UPI/PhonePe<br>GooglePay</p>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fas fa-credit-card fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0">Credit/Debit<br>Cards</p>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fas fa-university fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0">Net Banking<br>NEFT/RTGS</p>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fas fa-money-bill fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0">Cash<br>(In-Person)</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -341,7 +313,7 @@
                         </h2>
                         <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
                             <div class="accordion-body">
-                                Yes, we offer home health services for patients who have difficulty traveling to our clinic. This includes post-surgical patients, those with mobility limitations, or individuals recovering from serious injuries.
+                                Yes, we offer home health services for all patients.
                             </div>
                         </div>
                     </div>
