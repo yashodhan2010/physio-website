@@ -1,0 +1,29 @@
+version: 1.0
+runtime: container
+
+build:
+  context: .
+  dockerfile: Dockerfile
+
+run:
+  port: 5000
+  command: gunicorn --bind 0.0.0.0:5000 --workers 2 --timeout 120 application:app
+
+instance_configuration:
+  cpu: 0.5 vCPU
+  memory: 1 GB
+
+health_check:
+  path: "/"
+  interval: 20
+  timeout: 10
+  healthy_threshold: 1
+  unhealthy_threshold: 5
+
+environment:
+  FLASK_ENV: "production"
+  # You can include these here OR set them in AWS console:
+  # MAIL_USERNAME: "your.email@gmail.com"
+  # MAIL_PASSWORD: "your-app-password"
+  # SECRET_KEY: "your-secret-key"
+  # GOOGLE_ADS_CONVERSION_ID: "AW-123456789"
