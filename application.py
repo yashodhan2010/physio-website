@@ -36,6 +36,7 @@ def send_email(subject, body, to_email):
         msg.attach(MIMEText(body, 'plain'))
         
         server = smtplib.SMTP(smtp_server, smtp_port)
+        server.ehlo()
         server.starttls()
         server.login(username, password)
         server.send_message(msg)
@@ -98,7 +99,7 @@ def submit_contact():
         Submitted at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         """
         
-        recipient = os.environ.get('MAIL_DEFAULT_SENDER', email)
+        recipient = os.environ.get('MAIL_USERNAME')
         email_sent = send_email(f'New Contact Form Submission from {name}', email_body, recipient)
         
         if email_sent:
